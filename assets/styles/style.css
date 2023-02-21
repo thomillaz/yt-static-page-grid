@@ -1,0 +1,100 @@
+/* ----------------------------------------
+----- ABOUT -------------------------------
+-------------------------------------------
+----- Youtube Static Page - Grid Layout ---
+----- DIO Trilha CSS ----------------------
+----- Developed by Milla Thomaz, @thomillaz
+---------------------------------------- */
+/* ----- SETTINGS ---------------------- */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 218px 2fr;
+    grid-template-rows: 56px 900px;
+    grid-template-areas: 
+    "header header header header"
+    "sidebar main main main";
+}
+/* ----- HEADER ------------------------ */
+header{
+    background-color: #fff;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+.left{
+    display: flex;
+    width: 146px;
+    justify-content: space-between;
+    align-items: center;
+}
+.left img:first-child{
+    width: 24px;
+    height: 24px;
+}
+.left img:nth-child(2){
+    width: 90px;
+    height: 20px;
+}
+.center{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+.center img{
+    width: 404px;
+    height: 40px;
+}
+.right{
+    display: flex;
+    width: 130px;
+    justify-content: space-between;
+    align-items: center;
+}
+.right #user{
+    width: 34px;
+    height: 34px;
+    border-radius: 50px;
+}
+.right img{
+    width: 24px;
+    height: 24px;
+}
+/* ----- MAIN -------------------------- */
+main{
+    background-color: #f9f9f9;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+/* ----- ASIDE -------------------------- */
+aside{
+    background-color: #fff;
+    grid-area: sidebar;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+}
+aside .menu{
+    place-content: start;
+    row-gap: 30px;
+    padding-left: 25px;
+    display: grid;
+}
+aside .menu .item:first-child{
+    margin-top: 25px;
+}
+aside .menu .item:nth-child(9){
+    margin-left: -2px;
+}
+aside .menu .item:last-child{
+    margin-left: -3px;
+    margin-bottom: 25px;
+}
